@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
   s.platforms    = { :ios => min_ios_version_supported }
-  # s.source       = { :git => "https://github.com/angelo-hub/react-native-nitro-json.git", :tag => "#{s.version}" },
-  s.source       = { :git => "https://github.com/angelo-hub/react-native-nitro-json.git" },
+  s.source       = { :git => "https://github.com/angelo-hub/react-native-nitro-json.git", :tag => "#{s.version}" },
+  # s.source       = { :git => "https://github.com/angelo-hub/react-native-nitro-json.git" :branch => "main" },
 
   s.source_files = [
     # Implementation (Swift)

@@ -13,7 +13,7 @@
     "typescript": "^5.7.2"
   },
   "name": "nitro-json-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "start": "expo start",
