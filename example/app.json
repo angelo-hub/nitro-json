@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "nitro-json-example",
+    "slug": "nitro-json-example",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "android": {
+      "package": "com.anonymous.nitrojsonexample"
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.nitrojsonexample"
+    }
+  }
+}

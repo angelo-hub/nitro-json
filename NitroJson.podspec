@@ -9,21 +9,23 @@ Pod::Spec.new do |s|
   s.homepage     = package["homepage"]
   s.license      = package["license"]
   s.authors      = package["author"]
-  s.platforms    = { :ios => min_ios_version_supported, :visionos => 1.0 }
-  s.source       = { :git => "https://github.com/angelo-hub/react-native-nitro-json.git", :tag => "#{s.version}" },
+  s.platforms    = { :ios => min_ios_version_supported }
+  # s.source       = { :git => "https://github.com/angelo-hub/react-native-nitro-json.git", :tag => "#{s.version}" },
+  s.source       = { :git => "https://github.com/angelo-hub/react-native-nitro-json.git" },
 
   s.source_files = [
     # Implementation (Swift)
-    "ios/**/*.{swift}",
-    # Autolinking/Registration (Objective-C++)
-    "ios/**/*.{m,mm}",
-    # Implementation (C++ objects)
-    "cpp/**/*.{hpp,cpp}",
+    "ios/**/*.{h,m,swift}",
+    "cpp/**/*.{h,hpp,cpp}"
   ]
 
+  # s.pod_target_xcconfig = {
+  #   # C++ compiler flags, mainly for folly.
+  #   "GCC_PREPROCESSOR_DEFINITIONS" => "$(inherited) FOLLY_NO_CONFIG FOLLY_CFG_NO_COROUTINES"
+  # }
+
   s.pod_target_xcconfig = {
-    # C++ compiler flags, mainly for folly.
-    "GCC_PREPROCESSOR_DEFINITIONS" => "$(inherited) FOLLY_NO_CONFIG FOLLY_CFG_NO_COROUTINES"
+    'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/ios'
   }
 
   load 'nitrogen/generated/ios/NitroJson+autolinking.rb'
