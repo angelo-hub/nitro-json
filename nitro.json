@@ -1,0 +1,16 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": ["json"],
+  "ios": {
+    "iosModuleName": "NitroJson"
+  },
+  "android": {
+    "androidNamespace": ["json"],
+    "androidCxxLibName": "NitroJson"
+  },
+  "autolinking": {
+    "NitroJson": {
+      "cpp": "HybridJsonObject"
+    }
+  }
+}
